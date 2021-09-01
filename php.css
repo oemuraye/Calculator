@@ -1,106 +1,117 @@
 :root {
-    --basic-color: #047aed;
-    --dark-color: #333;
-    --white-color: #f4f4f4;
-    --basic-dark: #1c3fa8;
+  --basic-color: #047aed;
+  --dark-color: #333;
+  --white-color: #f4f4f4;
+  --basic-dark: #1c3fa8;
 }
 body {
-    font-family: 'lato', sans-serif;
-    color: #333;
-    line-height: 1.6;
+  font-family: "lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;    
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .container {
-    max-width: 1100px;
-/*    overflow: auto;*/
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1100px;
+  /*    overflow: auto;*/
+  margin: 0 auto;
+  padding: 0 20px;
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 a:hover {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    justify-content: center;
-    align-content: center;   
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  justify-content: center;
+  align-content: center;
 }
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat (3, 1fr);
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
 }
 /*having a div or element that looks like it's 2D*/
 .card {
-    background-color: #fff;
-    color: #333;
-    border-radius: 10px; 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;  
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
 }
 
 /*Animations*/
 @keyframes slideInFromLeft {
-    0% {
-        transform: rotateY(-100deg);
-    }
-    50% {
-        transform: rotateY(180);
-    }
-    100% {
-        transform: rotateY(0);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes slideInFromTop {
-    0% {
-        transform: translatey(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes slideInFromBottom {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
- @keyframes mymove {
-        from {
-            color: aqua;
-        }
-        to {
-            color: crimson;
-        }
-    }
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-in;
+}
+.slide-in-right {
+  animation: slideInFromRight 1s ease-in;
+}
+.slide-in-top {
+  animation: slideInFromTop 1s ease-in;
+}
+.slide-in-bottom {
+  animation: slideInFromBottom 1s ease-in;
+}
+
+@keyframes mymove {
+  from {
+    color: aqua;
+  }
+  to {
+    color: crimson;
+  }
 }
